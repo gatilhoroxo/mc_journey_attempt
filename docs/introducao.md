@@ -1,3 +1,10 @@
+<div class="navbar">
+  <a href="index.html">Início</a> |
+  <a href="introducao.html">Introdução</a> |
+  <a href="notas_tecnicas.html">Notas Técnicas</a> |
+  <a href="referencias.html">Referências Úteis</a>
+</div>
+
 # Introdução ao Arduino
 
 ## 🌍 O que é o Arduino?
@@ -33,11 +40,11 @@ Esses fundamentos são universais — o que você aprende aqui se aplica em prat
 Este repositório está organizado para acompanhar tua evolução:
 
 ```
-- Introducao.md → Este arquivo
+- Introducao → Este arquivo
 - ProjetosSimples/ → Projetos básicos (ex: Blink LED, sensores simples)
 - ProjetosAvancados/ → Projetos mais completos e integrados
-- Notas_Tecnicas.md → Explicações detalhadas sobre hardware, registradores, etc.
-- Referencias.md → Links, datasheets e materiais de estudo
+- Notas_Tecnicas → Explicações detalhadas sobre hardware, registradores, etc.
+- Referencias → Links, datasheets e materiais de estudo
 ```
 
 Cada projeto é documentado com:

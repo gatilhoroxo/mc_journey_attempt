@@ -1,3 +1,10 @@
+<div class="navbar">
+  <a href="index.html">Início</a> |
+  <a href="introducao.html">Introdução</a> |
+  <a href="notas_tecnicas.html">Notas Técnicas</a> |
+  <a href="referencias.html">Referências Úteis</a>
+</div>
+
 # Notas Técnicas — Arduino e Microcontroladores
 
 ## 🧠 Visão Geral
