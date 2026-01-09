@@ -146,18 +146,18 @@ idf.py -p /dev/ttyUSB0 flash monitor
 ## 📖 Referências Específicas ESP32
 
 ### Documentação Essencial
-1. **ESP-IDF Programming Guide** - https://docs.espressif.com/projects/esp-idf/en/latest/
+1. [**ESP-IDF Programming Guide**](https://docs.espressif.com/projects/esp-idf/en/latest/)
 2. **ESP32 Technical Reference Manual** - Hardware detalhado
 3. **ESP32 Datasheet** - Specs elétricas
 
 ### Livros
-- "Kolban's Book on ESP32" - Neil Kolban (gratuito)
-- "ESP32 for Makers" - Pratik Desai
+- ["Kolban's Book on ESP32" - Neil Kolban](https://roberthart56.github.io/SCFAB/SC_lab/Electronics/Microcontrollers/ESP32/kolban-ESP32.pdf)
+- "ESP32 for Makers" - Pratik Desai (não encongrei)
 
 ### Canais YouTube (PT-BR)
-- Brincando com Ideias
-- WR Kits
-- Fernando K Tecnologia
+- Brincando com Ideias - [Temporada ESP32](https://www.youtube.com/playlist?list=PL7CjOZ3q8fMdgvaq988L97y05Gb219fLd)
+- [WR Kits](https://www.youtube.com/results?search_query=esp32+WR+Kits+playlist)
+- [Fernando K Tecnologia](https://www.youtube.com/playlist?list=PL_xGnxKCyJXrup_lH20Yfsvi5pIL_9l9f)
 
 ### GitHub Exemplos
 - https://github.com/espressif/esp-idf/tree/master/examples
