@@ -29,7 +29,7 @@ void easy(void *pvParameters);
 void medium(void *pvParameters);
 void hard(void *pvParameters);
 
-void exercicio_01(){
+void extra(){
     static task_param_ease_t p_ease = {
         .led_pin = GPIO_NUM_2,
         .led_red = GPIO_NUM_25,

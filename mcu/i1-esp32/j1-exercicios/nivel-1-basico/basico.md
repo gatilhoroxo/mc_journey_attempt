@@ -79,6 +79,9 @@ gpio_set_pull_mode()       // Configura pull-up/pull-down
 - Output mode
 - Delays com FreeRTOS (vTaskDelay)
 
+<details>
+<summary>Código Básico pro Exercício</summary>
+
 ```c
 #include "driver/gpio.h"
 #include "freertos/FreeRTOS.h"
@@ -101,10 +104,13 @@ void app_main(void)
 }
 ```
 
+</details>
+
 **Desafios:**
-1. 🟢 **Fácil:** Fazer piscar mais rápido (200ms)
+1. 🟢 **Fácil:** Fazer piscar mais rápido e alternado com outro led
 2. 🟡 **Médio:** Criar padrão S.O.S em morse (curto-curto-curto, longo-longo-longo, curto-curto-curto)
 3. 🔴 **Difícil:** Usar 3 LEDs alternados criando efeito de "corrida"
+4. **Extra:** Fazer os três níveis anteriores ao mesmo tempo
 
 ---
 
@@ -124,6 +130,9 @@ void app_main(void)
 - Pull-up resistor interno
 - Leitura de estado digital (gpio_get_level)
 - Lógica invertida com pull-up (LOW = pressionado)
+
+<details>
+<summary>Código Básico pro Exercício</summary>
 
 ```c
 #define LED_PIN GPIO_NUM_2
@@ -154,6 +163,8 @@ void app_main(void)
 }
 ```
 
+</details>
+
 **Desafios:**
 1. 🟢 **Fácil:** Inverter lógica (botão apaga LED ao invés de acender)
 2. 🟡 **Médio:** Toggle LED (liga/desliga ao pressionar uma vez)
@@ -173,6 +184,9 @@ void app_main(void)
 - Debounce por software
 - Uso de timestamps (xTaskGetTickCount)
 - Máquina de estados simples
+
+<details>
+<summary>Código Básico pro Exercício</summary>
 
 ```c
 #define DEBOUNCE_TIME_MS 50
@@ -216,6 +230,8 @@ void app_main(void)
     }
 }
 ```
+
+</details>
 
 **Desafios:**
 1. 🟢 **Fácil:** Ajustar tempo de debounce para 100ms
@@ -276,6 +292,9 @@ ledc_set_freq()           // Muda frequência (para sons)
 - Duty cycle (0-255 com resolução de 8 bits)
 - Atualização de PWM em tempo real
 
+<details>
+<summary>Código Básico pro Exercício</summary>
+
 ```c
 #include "driver/ledc.h"
 
@@ -329,6 +348,8 @@ void app_main(void)
 }
 ```
 
+</details>
+
 **Desafios:**
 1. 🟢 **Fácil:** Inverter animação (começar com fade out)
 2. 🟡 **Médio:** Criar efeito de "respiração" com velocidade variável
@@ -348,6 +369,9 @@ void app_main(void)
 - Relação entre frequência e nota musical
 - Mudança dinâmica de frequência PWM
 - Controle de duração de notas
+
+<details>
+<summary>Código Básico pro Exercício</summary>
 
 ```c
 #define BUZZER_PIN GPIO_NUM_4
@@ -399,6 +423,8 @@ void app_main(void)
     }
 }
 ```
+
+</details>
 
 **Desafios:**
 1. 🟢 **Fácil:** Tocar melodia simples (ex: Parabéns pra Você)
@@ -461,6 +487,9 @@ adc1_get_raw()             // Lê valor bruto
 - Leitura de valor bruto (0-4095)
 - Conversão para voltagem
 
+<details>
+<summary>Código Básico pro Exercício</summary>
+
 ```c
 #include "driver/adc.h"
 
@@ -482,6 +511,8 @@ void app_main(void)
     }
 }
 ```
+
+</details>
 
 **Desafios:**
 1. 🟢 **Fácil:** Exibir valor em percentual (0-100%)
@@ -505,6 +536,9 @@ void app_main(void)
 - Integração ADC + PWM
 - Controle em tempo real
 
+<details>
+<summary>Código Básico pro Exercício</summary>
+
 ```c
 void app_main(void)
 {
@@ -525,6 +559,8 @@ void app_main(void)
     }
 }
 ```
+
+</details>
 
 **Desafios:**
 1. 🟢 **Fácil:** Adicionar histerese para evitar flickering
@@ -572,6 +608,9 @@ void app_main(void)
 - Multiplexação de GPIOs
 - Padrões binários para dígitos
 - Controle de múltiplos pinos simultaneamente
+
+<details>
+<summary>Código Básico pro Exercício</summary>
 
 ```c
 // Definir pinos (ajuste conforme sua conexão)
@@ -632,6 +671,8 @@ void app_main(void)
 }
 ```
 
+</details>
+
 ---
 
 ## 🎯 Projeto Final: Semáforo Inteligente
@@ -665,7 +706,7 @@ Sistema de semáforo completo com controle automático, botão de pedestre, disp
 ```
 VERDE (10s) --> AMARELO (3s) --> VERMELHO (10s) --> [loop]
     ↑                                    |
-    |         BOTÃO PEDESTRE              |
+    |         BOTÃO PEDESTRE             |
     +------------------------------------+
 ```
 
@@ -692,7 +733,9 @@ VERDE (10s) --> AMARELO (3s) --> VERMELHO (10s) --> [loop]
 #define BUZZER GPIO_NUM_4
 ```
 
-**Estrutura do Código (Template):**
+<details>
+<summary>Template Básico pro Projeto</summary>
+
 ```c
 #include "driver/gpio.h"
 #include "driver/ledc.h"
@@ -848,6 +891,8 @@ void app_main(void) {
 }
 ```
 
+</details>
+
 **Critérios de Avaliação:**
 - [ ] Código compila sem erros
 - [ ] Ciclo automático funciona corretamente
@@ -982,5 +1027,5 @@ O que você vai aprender:
 
 ---
 
-**Última atualização:** 26/12/2025
+**Última atualização:** 15/01/2026
 

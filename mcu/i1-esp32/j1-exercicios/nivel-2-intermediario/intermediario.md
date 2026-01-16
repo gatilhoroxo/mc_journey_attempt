@@ -98,6 +98,9 @@ gpio_set_intr_type()             // Define tipo de trigger
 - Execução de código em ISR (IRAM_ATTR)
 - Auto-reload de timers
 
+<details>
+<summary>Código Básico pro Exercício</summary>
+
 ```c
 #include "driver/gptimer.h"
 
@@ -149,6 +152,8 @@ void app_main(void)
 }
 ```
 
+</details>
+
 **Desafios:**
 1. 🟢 **Fácil:** Mudar frequência do blink para 500ms (mais rápido)
 2. 🟡 **Médio:** Usar 2 timers para controlar 2 LEDs em frequências diferentes
@@ -173,6 +178,9 @@ void app_main(void)
 - Tipos de trigger (POSEDGE, NEGEDGE, ANYEDGE)
 - Variáveis voláteis
 - Sincronização ISR vs main loop
+
+<details>
+<summary>Código Básico pro Exercício</summary>
 
 ```c
 #define BUTTON_PIN GPIO_NUM_0
@@ -204,6 +212,8 @@ void app_main(void)
     }
 }
 ```
+
+</details>
 
 **Desafios:**
 1. 🟢 **Fácil:** Mudar para detectar rising edge (quando solta o botão)
@@ -269,6 +279,9 @@ i2c_master_read_from_device() // Lê dados
 - Uso de bibliotecas externas (component)
 - Renderização gráfica em displays
 
+<details>
+<summary>Código Básico pro Exercício</summary>
+
 ```c
 #include "driver/i2c.h"
 
@@ -294,6 +307,8 @@ void i2c_master_init(void)
 // Use biblioteca como SSD1306 driver
 // Exemplo: https://github.com/nopnop2002/esp-idf-ssd1306
 ```
+
+</details>
 
 **Desafios:**
 1. 🟢 **Fácil:** Exibir "Hello ESP32!" centralizado na tela
@@ -365,6 +380,9 @@ httpd_register_uri_handler() // Registra endpoint
 - HTTP server e rotas
 - Controle remoto via web
 
+<details>
+<summary>Código Básico pro Exercício</summary>
+
 ```c
 #include "esp_wifi.h"
 #include "esp_http_server.h"
@@ -431,6 +449,8 @@ void start_webserver(void)
     httpd_register_uri_handler(server, &led_off);
 }
 ```
+
+</details>
 
 **Desafios:**
 1. 🟢 **Fácil:** Adicionar endpoint para toggle LED (/led/toggle)
@@ -602,4 +622,4 @@ O que você vai aprender:
 
 ---
 
-**Última atualização:** 26/12/2025
+**Última atualização:** 15/01/2026
