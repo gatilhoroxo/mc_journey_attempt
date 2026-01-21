@@ -1,0 +1,225 @@
+/* ============================================
+   VARIÁVEIS DE TEMA - MODO ESCURO (PADRÃO)
+   ============================================
+   Customize as cores abaixo para alterar o tema escuro.
+   Para tema claro, veja as variáveis em [data-theme="light"]
+*/
+:root {
+    /* Cores de fundo */
+    --bg: #0f172a;              /* Fundo principal */
+    --bg-light: #1e293b;        /* Fundo de header/footer */
+    
+    /* Cores de texto */
+    --text: #e2e8f0;            /* Texto principal */
+    
+    /* Cores de destaque */
+    --accent: #38bdf8;          /* Links e títulos */
+    --link-hover: #0ea5e9;      /* Links ao passar o mouse */
+    
+    /* Bordas */
+    --border: #334155;
+    
+    /* Tabelas */
+    --table-header-bg: #1f2833;
+    --table-header-text: #f1f1f1;
+    --table-row-even: #0b0c10;
+    --table-row-odd: #1c1f24;
+    --table-hover-bg: #323841;
+}
+
+/* ============================================
+   VARIÁVEIS DE TEMA - MODO CLARO
+   ============================================
+   Ativado quando data-theme="light"
+*/
+[data-theme="light"] {
+    /* Cores de fundo */
+    --bg: #f8fafc;
+    --bg-light: #e2e8f0;
+    
+    /* Cores de texto */
+    --text: #1e293b;
+    
+    /* Cores de destaque */
+    --accent: #0284c7;
+    --link-hover: #0369a1;
+    
+    /* Bordas */
+    --border: #cbd5e1;
+    
+    /* Tabelas */
+    --table-header-bg: #e9ecef;
+    --table-header-text: #222;
+    --table-row-even: #ffffff;
+    --table-row-odd: #f8f9fa;
+    --table-hover-bg: #dee2e6;
+}
+
+/* ============================================
+   ESTILOS GERAIS
+   ============================================ */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Roboto, sans-serif;
+    margin: 0;  /* Corrigido: era 30, agora é 0 */
+    padding: 0;
+    line-height: 1.6;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    background-color: var(--bg-light);
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ============================================
+   TIPOGRAFIA
+   ============================================ */
+h1, h2 {
+    color: var(--accent);
+}
+
+/* ============================================
+   NAVEGAÇÃO
+   ============================================ */
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-hover);
+}
+
+/* ============================================
+   BOTÃO DE ALTERNÂNCIA DE TEMA
+   ============================================ */
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+#theme-toggle:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* ============================================
+   CONTEÚDO PRINCIPAL
+   ============================================ */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border);
+}
+
+/* ============================================
+   TABELAS DE COMPONENTES
+   ============================================ */
+.component-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+}
+
+.component-table thead {
+    background: var(--table-header-bg);
+    color: var(--table-header-text);
+    font-weight: bold;
+}
+
+.component-table th, 
+.component-table td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+}
+
+.component-table tbody tr:nth-child(even) {
+    background: var(--table-row-even);
+}
+
+.component-table tbody tr:nth-child(odd) {
+    background: var(--table-row-odd);
+}
+
+.component-table tbody tr:hover {
+    background: var(--table-hover-bg);
+    transition: background 0.3s ease;
+}
+
+/* ============================================
+   BADGES (para layouts de projetos)
+   ============================================ */
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin: 0.2rem;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.projeto-meta {
+    margin: 1rem 0;
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 700px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+}

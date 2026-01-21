@@ -1,3 +1,8 @@
+---
+layout: default
+title: README
+---
+
 # 🌐 docs/
 
 Site estático com documentação web do projeto.

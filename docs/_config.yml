@@ -1,8 +1,33 @@
 title: Projetos Arduino
-theme: jekyll-theme-cayman
 description: Projetos e anotações sobre Arduino
 markdown: kramdown
-exclude:
-  - node_modules
-  - package.json
-  - tsconfig.json
+
+# Customização
+permalink: pretty
+
+# Sass/SCSS
+sass:
+  sass_dir: _layouts/css
+  style: compressed
+
+# Configurações do Kramdown (processador Markdown)
+kramdown:
+  input: GFM  # GitHub Flavored Markdown
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Coleções (opcional, para organizar projetos futuramente)
+collections:
+  projetos:
+    output: true
+    permalink: /projetos/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
