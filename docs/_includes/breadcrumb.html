@@ -1,0 +1,49 @@
+{% if page.breadcrumb %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Início</a>
+  
+  {% assign url_parts = page.url | split: '/' %}
+  {% assign current_path = '' %}
+  
+  {% for part in url_parts %}
+    {% if part != '' and part != 'index.html' %}
+      {% assign current_path = current_path | append: '/' | append: part %}
+      
+      {% if forloop.last %}
+        <span class="breadcrumb-separator">></span>
+        <span class="breadcrumb-current" aria-current="page">{{ page.title }}</span>
+      {% else %}
+        <span class="breadcrumb-separator">></span>
+        
+        {% if part == 'learn' or part == 'aprendizado' %}
+          <a href="{{ '/learn/' | relative_url }}">Aprendizado</a>
+        {% elsif part == 'i0-roadmaps' %}
+          <a href="{{ '/learn/i0-roadmaps/' | relative_url }}">Roadmaps</a>
+        {% elsif part == 'i1-conceitos-fundamentais' %}
+          <a href="{{ '/learn/i1-conceitos-fundamentais/' | relative_url }}">Conceitos Fundamentais</a>
+        {% elsif part == 'i2-ferramentas' %}
+          <a href="{{ '/learn/i2-ferramentas/' | relative_url }}">Ferramentas</a>
+        {% elsif part == 'i3-mcus-especificacoes' %}
+          <a href="{{ '/learn/i3-mcus-especificacoes/' | relative_url }}">MCUs Especificações</a>
+        {% elsif part == 'i4-diario-aprendizado' %}
+          <a href="{{ '/learn/i4-diario-aprendizado/' | relative_url }}">Diário de Aprendizado</a>
+        {% elsif part == 'i5-referencias' %}
+          <a href="{{ '/learn/i5-referencias/' | relative_url }}">Referências</a>
+        {% elsif part == 'i6-templates' %}
+          <a href="{{ '/learn/i6-templates/' | relative_url }}">Templates</a>
+        {% elsif part == 'i7-mcus-pratica' %}
+          <a href="{{ '/learn/i7-mcus-pratica/' | relative_url }}">MCUs Prática</a>
+        {% elsif part == 'j1-aprendizado' %}
+          <a href="{{ current_path | append: '/' | relative_url }}">Aprendizado</a>
+        {% elsif part == 'j2-exercicios' %}
+          <a href="{{ current_path | append: '/' | relative_url }}">Exercícios</a>
+        {% elsif part == 'j3-projetos' %}
+          <a href="{{ current_path | append: '/' | relative_url }}">Projetos</a>
+        {% else %}
+          <a href="{{ current_path | append: '/' | relative_url }}">{{ part }}</a>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</nav>
+{% endif %}

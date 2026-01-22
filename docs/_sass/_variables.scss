@@ -1,0 +1,56 @@
+/* ============================================
+   VARIÁVEIS DE TEMA - MODO ESCURO (PADRÃO)
+   ============================================
+   Customize as cores abaixo para alterar o tema escuro.
+   Para tema claro, veja as variáveis em [data-theme="light"]
+*/
+:root {
+    /* Cores de fundo */
+    --bg: #0f172a;              /* Fundo principal */
+    --bg-light: #1e293b;        /* Fundo de header/footer */
+    
+    /* Cores de texto */
+    --text: #e2e8f0;            /* Texto principal */
+    
+    /* Cores de destaque */
+    --accent: #38bdf8;          /* Links e títulos */
+    --link-hover: #0ea5e9;      /* Links ao passar o mouse */
+    
+    /* Bordas */
+    --border: #334155;
+    
+    /* Tabelas */
+    --table-header-bg: #1f2833;
+    --table-header-text: #f1f1f1;
+    --table-row-even: #0b0c10;
+    --table-row-odd: #1c1f24;
+    --table-hover-bg: #323841;
+}
+
+/* ============================================
+   VARIÁVEIS DE TEMA - MODO CLARO
+   ============================================
+   Ativado quando data-theme="light"
+*/
+[data-theme="light"] {
+    /* Cores de fundo */
+    --bg: #f8fafc;
+    --bg-light: #e2e8f0;
+    
+    /* Cores de texto */
+    --text: #1e293b;
+    
+    /* Cores de destaque */
+    --accent: #0284c7;
+    --link-hover: #0369a1;
+    
+    /* Bordas */
+    --border: #cbd5e1;
+    
+    /* Tabelas */
+    --table-header-bg: #e9ecef;
+    --table-header-text: #222;
+    --table-row-even: #ffffff;
+    --table-row-odd: #f8f9fa;
+    --table-hover-bg: #dee2e6;
+}

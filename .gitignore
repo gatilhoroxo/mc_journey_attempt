@@ -1,3 +1,12 @@
+# Gem files generated
+Gemfile.lock
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+
+
 # Build artifacts
 *.o
 *.elf

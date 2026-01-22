@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/base/style.css' | relative_url }}">
+</head>
+<body>
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar">
+    <span class="toggle-icon">☰</span>
+  </button>
+
+  {% include sidebar.html %}
+  {% include header.html %}
+  
+  {% include breadcrumb.html %}
+  
+  <main>
+    {{ content }}
+  </main>
+  
+  {% include footer.html %}
+  
+  <script>
+    // Theme Toggle Script
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    
+    themeToggle.addEventListener('click', () => {
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    });
+
+    // Sidebar Toggle Script
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const body = document.body;
+    
+    // Verificar estado salvo da sidebar
+    const sidebarState = localStorage.getItem('sidebarCollapsed');
+    if (sidebarState === 'true') {
+      sidebar.classList.add('collapsed');
+      body.classList.add('sidebar-collapsed');
+    }
+    
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+      sidebar.classList.toggle('mobile-open');
+      body.classList.toggle('sidebar-collapsed');
+      
+      // Salvar estado
+      localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+    });
+
+    // Fechar sidebar ao clicar em link (mobile)
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.sidebar a').forEach(link => {
+        link.addEventListener('click', () => {
+          sidebar.classList.remove('mobile-open');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

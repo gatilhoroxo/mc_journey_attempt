@@ -1,0 +1,136 @@
+/* ============================================
+   ESTILOS GERAIS
+   ============================================ */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-left: 280px;
+    line-height: 1.6;
+    transition: background 0.4s ease, color 0.4s ease, padding-left 0.3s ease;
+}
+
+body.sidebar-collapsed {
+    padding-left: 0;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    background-color: var(--bg-light);
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ============================================
+   TIPOGRAFIA
+   ============================================ */
+h1, h2 {
+    color: var(--accent);
+}
+
+/* ============================================
+   NAVEGAÇÃO
+   ============================================ */
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-hover);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+code {
+    background-color: var(--bg-light);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: var(--bg-light);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.85em;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 1.2rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+#theme-toggle:hover {
+    background-color: var(--bg);
+    transform: scale(1.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-left: 0 !important;
+    }
+}

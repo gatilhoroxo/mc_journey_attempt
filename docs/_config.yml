@@ -1,5 +1,5 @@
-title: Projetos Arduino
-description: Projetos e anotações sobre Arduino
+title: Projetos Microcontroladores
+description: Projetos e anotações sobre Microcontroladores
 markdown: kramdown
 
 # Customização
@@ -7,7 +7,7 @@ permalink: pretty
 
 # Sass/SCSS
 sass:
-  sass_dir: _layouts/css
+  sass_dir: _sass
   style: compressed
 
 # Configurações do Kramdown (processador Markdown)
@@ -18,16 +18,22 @@ kramdown:
     block:
       line_numbers: true
 
-# Coleções (opcional, para organizar projetos futuramente)
-collections:
-  projetos:
-    output: true
-    permalink: /projetos/:name/
+# GitHub Pages
+url: "https://gatilhoroxo.github.io"
+baseurl: "/mc_journey_attempt"
 
 # Defaults
 defaults:
   - scope:
       path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "learn"
+    values:
+      layout: "default"
+  - scope:
+      path: "base"
     values:
       layout: "default"
 
