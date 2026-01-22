@@ -1,0 +1,54 @@
+// Navigation Sidebar - Gerencia comportamento da sidebar (desktop/mobile)
+(function() {
+  const sidebar = document.getElementById('sidebar');
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const body = document.body;
+  
+  // Verificar estado salvo da sidebar
+  const sidebarState = localStorage.getItem('sidebarCollapsed');
+  if (sidebarState === 'true') {
+    sidebar.classList.add('collapsed');
+    body.classList.add('sidebar-collapsed');
+  }
+  
+  sidebarToggle.addEventListener('click', () => {
+    // Comportamento condicional: desktop vs mobile
+    if (window.innerWidth <= 768) {
+      // Mobile: toggle mobile-open apenas
+      sidebar.classList.toggle('mobile-open');
+    } else {
+      // Desktop: toggle collapsed
+      sidebar.classList.toggle('collapsed');
+      body.classList.toggle('sidebar-collapsed');
+      
+      // Salvar estado
+      localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+    }
+  });
+
+  // Atualizar sidebar ao redimensionar janela
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+      // Mobile: remover classes desktop e garantir mobile-open fechado por padrão
+      sidebar.classList.remove('collapsed');
+      body.classList.remove('sidebar-collapsed');
+    } else {
+      // Desktop: remover mobile-open e restaurar estado salvo
+      sidebar.classList.remove('mobile-open');
+      const sidebarState = localStorage.getItem('sidebarCollapsed');
+      if (sidebarState === 'true') {
+        sidebar.classList.add('collapsed');
+        body.classList.add('sidebar-collapsed');
+      }
+    }
+  });
+
+  // Fechar sidebar ao clicar em link (mobile)
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove('mobile-open');
+      }
+    });
+  });
+})();
