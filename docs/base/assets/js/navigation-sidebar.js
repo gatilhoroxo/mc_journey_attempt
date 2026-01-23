@@ -4,11 +4,13 @@
   const sidebarToggle = document.getElementById('sidebar-toggle');
   const body = document.body;
   
-  // Verificar estado salvo da sidebar
+  // Verificar estado salvo da sidebar (padrão: collapsed)
   const sidebarState = localStorage.getItem('sidebarCollapsed');
-  if (sidebarState === 'true') {
+  if (sidebarState !== 'false') {
     sidebar.classList.add('collapsed');
     body.classList.add('sidebar-collapsed');
+  } else {
+    body.classList.remove('sidebar-collapsed');
   }
   
   sidebarToggle.addEventListener('click', () => {

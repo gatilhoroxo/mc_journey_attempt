@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: learn-default
 title: Roadmap Visual
 permalink: /learn/i0-roadmaps/roadmap_visual/
 ---

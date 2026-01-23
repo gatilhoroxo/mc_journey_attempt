@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: learn-default
 title: Template de Conceito
 ---
 

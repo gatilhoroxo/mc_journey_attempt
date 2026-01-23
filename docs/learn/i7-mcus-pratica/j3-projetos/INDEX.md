@@ -1,7 +1,6 @@
 ---
-layout: default
+layout: learn-default
 title: Projetos com MCUs
-breadcrumb: true
 ---
 
 # 🚀 Projetos com MCUs

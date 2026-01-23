@@ -1,7 +1,6 @@
 ---
-layout: default
+layout: learn-default
 title: Microcontroladores - Especificações Técnicas
-breadcrumb: true
 ---
 
 # 🔧 Microcontroladores - Especificações Técnicas
@@ -56,4 +55,4 @@ Documentação técnica e especificações dos microcontroladores utilizados nes
 
 ---
 
-[⬅ Voltar para Aprendizado]({{ '/aprendizado/learn/' | relative_url }})
+[⬅ Voltar para Aprendizado]({{ '/learn/' | relative_url }})

@@ -1,7 +1,6 @@
 ---
-layout: default
+layout: learn-default
 title: Aprendizado com MCUs
-breadcrumb: true
 ---
 
 # 📝 Aprendizado com MCUs

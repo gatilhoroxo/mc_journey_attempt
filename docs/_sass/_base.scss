@@ -3,6 +3,7 @@
    ============================================ */
 html {
     min-height: 100vh;
+    transition: font-size 0.3s ease;
 }
 
 body {
@@ -11,16 +12,15 @@ body {
     font-family: "Segoe UI", Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    padding-left: 280px;
+    padding-left: calc(var(--iconbar-width) + var(--sidebar-width));
     line-height: 1.6;
-    transition: background 0.4s ease, color 0.4s ease, padding-left 0.3s ease;
+    @include transition(background 0.4s ease, color 0.4s ease, padding-left);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 }
 
 body.sidebar-collapsed {
-    padding-left: 36px;
+    padding-left: var(--iconbar-width);
 }
 
 /* ============================================
@@ -33,15 +33,14 @@ header {
     border-bottom: 1px solid var(--border);
     top: 0;
     z-index: 90;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: center;
     gap: 1.76rem;
     position: relative;
 }
 
 header h1 {
-    font-size: 1.95rem;
+    font-size: var(--font-size-2xl);
     margin: 0.25rem 0;
     line-height: 1.2;
 }
@@ -64,8 +63,9 @@ nav a {
     margin-top: 4px;
     margin-bottom: 1px;
     padding: 0.4rem 0.6rem;
-    border-radius: 4px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    @include border-radius(var(--radius-sm));
+    @include transition(color, 0.3s, ease);
+    @include transition(background-color, 0.3s, ease);
 }
 
 nav a:hover {
@@ -77,9 +77,9 @@ nav a:hover {
    MAIN CONTENT
    ============================================ */
 main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: var(--max-content-width);
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--spacing-md);
     flex: 1;
 }
 
@@ -102,15 +102,15 @@ a:hover {
 code {
     background-color: var(--bg-light);
     padding: 2px 6px;
-    border-radius: 4px;
+    @include border-radius(var(--radius-sm));
     font-family: "Courier New", monospace;
     font-size: 0.9em;
 }
 
 pre {
     background-color: var(--bg-light);
-    padding: 1rem;
-    border-radius: 8px;
+    padding: var(--spacing-md);
+    @include border-radius(var(--radius-lg));
     overflow-x: auto;
     border: 1px solid var(--border);
 }
@@ -118,7 +118,7 @@ pre {
 pre code {
     background: none;
     padding: 0;
-    font-size: 0.85em;
+    font-size: var(--font-size-sm);
 }
 
 /* ============================================
@@ -126,34 +126,11 @@ pre code {
    ============================================ */
 footer {
     background-color: var(--bg-light);
-    padding: 1.5rem;
+    padding: var(--spacing-lg);
     text-align: center;
     border-top: 1px solid var(--border);
-    margin-top: 3rem;
+    margin-top: var(--spacing-2xl);
     flex-shrink: 0;
-}
-
-/* ============================================
-   THEME TOGGLE BUTTON
-   ============================================ */
-#theme-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1.5rem;
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-size: 1.1rem;
-    padding: 0.35rem 0.6rem;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    z-index: 100;
-}
-
-#theme-toggle:hover {
-    background-color: var(--bg);
-    transform: scale(1.1);
 }
 
 /* ============================================
@@ -161,18 +138,18 @@ footer {
    ============================================ */
 
 /* Desktop/Tablet - 769px a 1200px */
-@media (max-width: 1200px) and (min-width: 769px) {
+@include respond-to('desktop-large') {
     body {
-        padding-left: 280px;
+        padding-left: calc(var(--iconbar-width) + var(--sidebar-width));
     }
     
     body.sidebar-collapsed {
-        padding-left: 36px;
+        padding-left: var(--iconbar-width);
     }
     
     header {
-        padding: 1.5rem 4rem 1.5rem 0.5rem;
-        gap: 1.5rem;
+        padding: var(--spacing-lg) 4rem var(--spacing-lg) 0.5rem;
+        gap: var(--spacing-lg);
     }
     
     header h1 {
@@ -180,12 +157,10 @@ footer {
     }
 }
 
-/* Medium Screen removed - unified to 768px breakpoint */
-
 /* Tablet - 481px a 768px */
-@media (max-width: 768px) {
+@include respond-to('tablet') {
     body {
-        padding-left: 36px !important;
+        padding-left: var(--iconbar-width) !important;
     }
     
     header {
@@ -203,13 +178,17 @@ footer {
         margin: 0 4px;
         padding: 0.35rem 0.5rem;
     }
+    
+    main {
+        padding: 0 var(--spacing-sm);
+    }
 }
 
 /* Mobile Small - até 480px */
-@media (max-width: 480px) {
+@include respond-to('mobile') {
     header {
-        padding: 1rem 3rem 1rem 0.3rem;
-        gap: 1rem;
+        padding: var(--spacing-md) var(--spacing-2xl) var(--spacing-md) 0.3rem;
+        gap: var(--spacing-md);
     }
     
     header h1 {

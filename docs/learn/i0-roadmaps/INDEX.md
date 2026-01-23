@@ -1,7 +1,6 @@
 ---
-layout: default
+layout: learn-default
 title: Roadmaps de Aprendizado
-breadcrumb: true
 ---
 
 # 🗺️ Roadmaps de Aprendizado
@@ -19,4 +18,4 @@ Os roadmaps servem como guia para organizar seu aprendizado de forma progressiva
 
 ---
 
-[⬅ Voltar para Aprendizado]({{ '/aprendizado/learn/' | relative_url }})
+[⬅ Voltar para Aprendizado]({{ '/learn/' | relative_url }})

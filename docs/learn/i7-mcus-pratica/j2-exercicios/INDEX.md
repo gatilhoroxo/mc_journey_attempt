@@ -1,7 +1,6 @@
 ---
-layout: default
+layout: learn-default
 title: Exercícios com MCUs
-breadcrumb: true
 ---
 
 # 💻 Exercícios com MCUs

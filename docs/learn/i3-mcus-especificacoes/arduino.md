@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: learn-default
 title: Arduino (ATmega328P)
 mcu_type: arduino
 description: Plataforma de prototipagem open-source baseada no ATmega328P
 datasheet: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
-breadcrumb: true
 ---
 
 # Arduino (ATmega328P)
@@ -26,8 +25,8 @@ O **Arduino** é uma plataforma de prototipagem eletrônica **open-source** base
 
 - [Documentação Oficial Arduino](https://docs.arduino.cc/)
 - [Datasheet ATmega328P]({{ page.datasheet }})
-- [Diagrama de Pinos](/mcu/pin-diagrams/arduino-uno-r3)
+- [Diagrama de Pinos]({{ '/mcu/pin-diagrams/arduino-uno-r3' | relative_url }})
 
 ## 🎯 Projetos e Exercícios
 
-Veja os [exercícios de Arduino](/exercicios/#arduino) e [projetos](/projetos/#arduino).
+Veja os projetos e exercícios de Arduino na seção [Prática com MCUs]({{ '/learn/i7-mcus-pratica/' | relative_url }}).

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: learn-default
 title: ESP32
 mcu_type: esp32
 description: Microcontrolador com WiFi e Bluetooth integrados
 datasheet: https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf
-breadcrumb: true
 ---
 
 # ESP32
@@ -26,8 +25,8 @@ O **ESP32** é um microcontrolador poderoso da Espressif com WiFi e Bluetooth in
 
 - [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/)
 - [Datasheet ESP32]({{ page.datasheet }})
-- [Diagrama de Pinos](/mcu/pin-diagrams/esp32-devkit-v1)
+- [Diagrama de Pinos]({{ '/mcu/pin-diagrams/esp32-devkit-v1' | relative_url }})
 
 ## 🎯 Projetos e Exercícios
 
-Veja os [exercícios de ESP32](/exercicios/#esp32) e [projetos](/projetos/#esp32).
+Veja os projetos e exercícios de ESP32 na seção [Prática com MCUs]({{ '/learn/i7-mcus-pratica/' | relative_url }}).

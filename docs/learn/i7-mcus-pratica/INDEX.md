@@ -1,7 +1,6 @@
 ---
-layout: default
+layout: learn-default
 title: MCUs - Prática e Projetos
-breadcrumb: true
 ---
 
 # 🎯 MCUs - Prática e Projetos
@@ -38,4 +37,4 @@ Esta seção contém a **documentação** desses projetos.
 
 ---
 
-[⬅ Voltar para Aprendizado]({{ '/aprendizado/learn/' | relative_url }})
+[⬅ Voltar para Aprendizado]({{ '/learn/' | relative_url }})

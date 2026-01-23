@@ -1,3 +1,7 @@
+---
+layout: learn-default
+title: learning
+---
 
 # 📚 learn/
 

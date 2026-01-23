@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: learn-default
 title: STM8
 mcu_type: stm8
 description: Microcontrolador 8-bit da STMicroelectronics
 datasheet: https://www.st.com/resource/en/reference_manual/cd00190271-stm8s-series-and-stm8af-series-8bit-microcontrollers-stmicroelectronics.pdf
-breadcrumb: true
 ---
 
 # STM8
@@ -25,8 +24,8 @@ O **STM8** é uma família de microcontroladores 8-bit da STMicroelectronics, co
 
 - [STM8 Reference Manual]({{ page.datasheet }})
 - [STM8 Programming Manual](https://www.st.com/resource/en/programming_manual/cd00161709.pdf)
-- [Diagrama de Pinos](/mcu/pin-diagrams/stm8s103f3)
+- [Diagrama de Pinos]({{ '/mcu/pin-diagrams/stm8s103f3' | relative_url }})
 
 ## 🎯 Projetos e Exercícios
 
-Veja os [exercícios de STM8](/exercicios/#stm8) e [projetos](/projetos/#stm8).
+Veja os projetos e exercícios de STM8 na seção [Prática com MCUs]({{ '/learn/i7-mcus-pratica/' | relative_url }}).

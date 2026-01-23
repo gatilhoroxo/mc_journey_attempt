@@ -1,12 +1,15 @@
 ---
-layout: default
+layout: learn-default
 title: Diário de Aprendizado
 ---
 
 # 📔 Diário de Aprendizado
 
-
 Registro pessoal do progresso de aprendizado.
+
+## 📊 Tracker de Progresso
+
+[📈 Ver Tracker de Progresso](TRACKER) - Acompanhamento detalhado do progresso em cada microcontrolador.
 
 ## 📂 Organização
 
